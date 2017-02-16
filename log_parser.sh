@@ -10,7 +10,6 @@ usage() {
 	echo -e "\n\ttimestamp:\tTimestamp in the format 'MM/DD/YYYY HH:mm:ss'"
 	}
 
-
 if [ $# -ne 1 ]
 then
 	usage

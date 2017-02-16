@@ -16,7 +16,6 @@ def usage():
         timestamp: Timestamp in the format 'MM/DD/YYYY HH:mm:ss'
     '''.format(IN_FILE, OUT_FILE, sys.argv[0]))
 
-
 if (len(sys.argv) != 2) or (sys.argv[1] in ['-h', '--help']):
     usage()
     sys.exit(1)
@@ -27,7 +26,6 @@ except ValueError:
     print('ERROR: invalid timestamp format!')
     usage()
     sys.exit(1)
-
 
 BEG_TIME = FAIL_TIME - timedelta(minutes=2)
 END_TIME = FAIL_TIME + timedelta(minutes=2)
@@ -63,3 +61,4 @@ if file_created:
     print('See the results in ', OUT_FILE)
 else:
     print('No matches in this date range.')
+
