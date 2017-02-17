@@ -10,7 +10,7 @@ USR="apache"
 
 usage() {
 	echo -e "\n\nCopy file(s) from ${LOGS_DIR} and/or ${VAR_DIR}"
-	echo -e "to $OUT_DIR. If multiple files, a .zip archive will be created."
+	echo -e "to ${OUT_DIR}. If multiple files, a .zip archive will be created."
 	echo -e "\nUsage:\n\t$0 arg1 [arg2 ...]"
 	echo -e "\n\targ1, arg2, ...:  File(s) or Dir(s) path(s)"
 }
