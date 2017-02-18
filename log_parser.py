@@ -11,8 +11,6 @@ JIRA_USR = 'admin'
 JIRA_PWD = 'admin'
 JIRA_PROJECT = '10000'
 JIRA_ISSUE_TYPE = 'Bug'
-JIRA_ISSUE = {'fields': {'project': {'id': JIRA_PROJECT }, 'summary': 'No REST for the Wicked.', 'description': 'reating of an issue using ids for projects and issue types using the REST API', 'issuetype': {'name': JIRA_ISSUE_TYPE}}}
-
 
 def usage():
     print('''
@@ -43,6 +41,9 @@ print('''
         Starting at {1}
         Ending at {2}
     '''.format(IN_FILE, BEG_TIME, END_TIME))
+
+
+JIRA_ISSUE = {'fields': {'project': {'id': JIRA_PROJECT }, 'summary': 'A failure occured at {0}'.format(FAIL_TIME), 'description': 'The log file within that timeframe has been attached to this issue.', 'issuetype': {'name': JIRA_ISSUE_TYPE}}}
 
 
 def create_issue(url, user, passwd, data):
